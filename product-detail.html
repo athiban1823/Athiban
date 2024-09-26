@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/product-detail.css">
+</head>
+<body>
+    <div class="container">
+        
+
+
+    <div class="container0">
+        <div class="product-image">
+            <img id="product-image" src="" alt="Product Image">
+
+            <div class="des">
+                <div class="item-container">
+                    <div class="item-header" data-target="desc1">DESCRIPTION</div>
+                    <div id="desc1" class="description-container"> <p id="product-description">Product Description</p>
+                    </div>
+                </div>
+                
+                <div class="item-container">
+                    <div class="item-header" data-target="desc2">Features
+                    </div>
+                    <div id="desc2" class="description-container"> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias corrupti blanditiis aperiam, quam illum esse facilis. Voluptatem nihil vel ipsum?</p></div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="product-details">
+            <h1 id="product-name">Product Name</h1>
+          
+            <p class="price" id="product-price">₹0</p>
+            
+
+            <!-- Quantity Selector -->
+            <div class="quantity-container">
+                <button id="decrease-quantity">-</button>
+                <input type="text" id="quantity" value="1" readonly>
+                <button id="increase-quantity">+</button>
+            </div>
+
+            <!-- Actions -->
+            <div class="actions">
+                <button class="add-to-wishlist" id="add-to-wishlist">Add to Wishlist</button>
+                <button class="add-to-cart" id="add-to-cart">Add to Cart</button>
+            </div>
+            
+                
+            <div class="buy"><button class="buy-now">Buy It Now</button>
+                </div>
+            
+            <div class="payment">
+                <img src="https://cdn.shopify.com/shopifycloud/web/assets/v1/71a20f5a6c5413cb.svg" alt="">
+                <img src="https://cdn.shopify.com/shopifycloud/web/assets/v1/2659ae94c062303b.svg" alt="">
+                <img src="https://cdn.shopify.com/shopifycloud/web/assets/v1/7b32514134e62ce3.svg" alt="">
+                <img src="https://cdn.shopify.com/shopifycloud/web/assets/v1/5be607cfff658246.svg" alt="">
+                <img src="https://cdn.shopify.com/shopifycloud/web/assets/v1/e25a7074e5137f8c.svg" alt="">
+            </div>
+        </div>
+    </div>
+
+
+        <!-- Related Products Section -->
+<div class="related-products">
+    <h2>Related Products</h2>
+    <div class="product-list">
+        <!-- Example related product 1 -->
+        <div class="product-item">
+            <img class="related-img" src="https://bandidospitstop.com/cdn/shop/files/JKT10865MOTOWOLFARMOURJACKETBLACK1031BM.webp?v=1697801445&width=1125" alt="Related Product 1">
+            <h3 class="related-name">Motowolf Jacket Orange 0520</h3>
+            <p class="price">₹999</p>
+            <!-- <a href="?id=1">View Product</a> -->
+        </div>
+
+        <!-- Example related product 2 -->
+        <div class="product-item">
+            <img src="https://bandidospitstop.com/cdn/shop/products/JKT6178C-9.jpg?v=1647406402&width=1125" alt="Related Product 2">
+            <h3>Rynox Storm Evo L2 Noctex Jacket</h3>
+            <p class="price">₹1,299</p>
+            <!-- <a href="?id=2">View Product</a> -->
+        </div>
+
+        <!-- Example related product 3 -->
+        <div class="product-item">
+            <img src="https://bandidospitstop.com/cdn/shop/products/JKT6178C-9.jpg?v=1647406402&width=1125" alt="Related Product 3">
+            <h3>Motowolf Armour Jacket Black 1031B</h3>
+            <p class="price">₹799</p>
+            <!-- <a href="?id=3">View Product</a> -->
+        </div>
+
+        <!-- Example related product 4 -->
+        <div class="product-item">
+            <img src="https://bandidospitstop.com/cdn/shop/products/JKT6178C-9.jpg?v=1647406402&width=1125" alt="Related Product 4">
+            <h3>Rynox Cypher GT Jacket Gray</h3>
+            <p class="price">₹1,099</p>
+            <!-- <a href="?id=4">View Product</a> -->
+        </div>
+    </div>
+</div>
+
+ 
+     
+</div>
+
+    <script src="js/product-details.js"></script>
+</body>
+</html>

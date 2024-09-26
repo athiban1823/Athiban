@@ -1,0 +1,453 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    background-color:#f3f4f8;
+}
+.regis{
+    width: 100%;
+    height: 30px;
+    background-color:white;
+    display: flex;
+    align-items: center;
+}
+.regis ul{
+    list-style: none;
+    margin-left: 20px;
+}
+.regis ul li{
+    display: inline;
+    align-items: center;
+}
+.regis ul li a{
+    text-decoration: none;
+    margin-left: 50px;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight:bold;
+    color: black;
+}
+
+.regis ul li a:hover{
+    color: #2874f0;
+}
+
+.regis span{
+    margin-right: 5px;
+}
+
+header{
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    background-color:#FFD737;
+}
+.logo{
+    margin-left: 0px;
+    color: white;
+    height: 100px;
+}
+.logo h1 img{
+    width: 120px;
+    height: auto;
+    margin-left: 100px;
+}
+.logo i{
+    display: none;
+    position: absolute;
+    left: 15px;  top: 12px;
+    font-size: 25px;
+}
+header ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+header ul li{
+    list-style: none;
+}
+.nav li{
+    cursor: pointer;
+    padding: 20px;
+    height: auto;
+}
+.srch{
+    margin-left: 20px;
+    width: 550px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    margin-right: 0px;
+    border: 2px solid gray;
+    border-radius: 40px;
+    position: relative;
+
+}
+.srch input{
+    width:100%;
+    height:50px;
+    border-radius:40px;
+    border: none;
+    text-indent: 10px;
+    outline: none;
+    
+}
+.srch input:focus{
+    text-indent: 10px;
+}
+.srch button{
+    height:40px;
+    padding-bottom:20px;
+    width: 40px;
+    border-radius: 50%;
+    background-color:#FFD737;
+    border: none;
+    outline: none;
+    color: gray;
+    font-size: 10px;
+    position: absolute;
+    right:5px 
+}
+.srch button i{
+padding: 10px;
+font-size: 20px;
+}
+header ul{
+    display: flex;
+    width: 100%;
+    justify-content:right;
+    list-style: none;
+    color:black;
+}
+.log .submenu{
+position:fixed;
+z-index: 888;
+right:0px;
+top:80px;
+}
+.nav{
+    margin-right: 30px;
+}
+.log i{
+    font-size: 20px;
+    color:#FFD737;
+}
+.log p{
+  
+    background-color:white;
+    padding: 10px;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid gray;
+
+}
+.log ul li{
+    font-size: 16px;
+    padding-top:15px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    color: black;
+    font-weight: lighter;
+    text-align: left;
+}
+.carti{
+    width: 180px;
+    display: flex;
+    justify-content:left;
+    align-items: center;
+    height: 50px;
+    background-color:white;
+    border-radius: 30px;
+    border: 2px solid gray;
+    margin-right: 100px;
+    position: relative;
+}
+.carti .cart-count{
+    font-size: 10px;
+    position: absolute;
+    top: 0px; left: 30px;
+    background-color: #FFD737;
+    padding: 5px;
+    border-radius: 50%;
+}
+.carti p{
+    background-color: #FFD737;
+    padding: 7px;
+    margin-left: 5px;
+    border-radius: 50%;
+}
+.carti p i{
+    font-size: 20px;
+    color: gray;
+}
+.carti .total-title{
+    font-size: 15px;
+    font-weight: lighter;
+    margin-left: 10px;
+}
+.carti .total-price{
+    font-size: 15px;
+    font-weight: lighter;
+    margin-left: 10px;
+}
+
+.nav li{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* header 2 */
+.header2{
+    height: 50px;
+    background-color:white;
+    border-bottom: 2px solid rgb(205, 203, 203);
+}
+.head2{
+    padding-top: 15px;
+    text-align:left;
+}
+.head2 li{
+    display:inline;
+   padding: 30px;
+    font-weight: bold;
+}
+.head2 li i{
+    font-size: 10px;
+    color: gray;
+}
+
+.main{
+    height: 450px;
+    background-color:black;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 180px;
+    left: 0px;
+    visibility:hidden;
+}
+
+.main .sub1 {
+   background-color:black;
+   cursor: pointer;
+   width:20%;
+   height: 400px;
+   text-align: left;
+}
+ .main .sub1 h4{
+    padding-left:0px;
+    color: white;
+    font-size: 16px;
+}
+.main.sub1 li{
+    padding-left:10px;
+} 
+.sub1 hr{
+    margin-left: 20px;
+    margin-top: -10px;
+    margin-right:65px;
+}
+.main .sub1 li a{
+    margin:0px;
+    font-size: 13px;
+    color: rgb(215, 210, 210);
+    display: block;
+    padding-left:20px;
+    text-decoration: none;
+}
+.head2 .elect:hover .main{
+    visibility: visible;
+    z-index: 999;
+    transition-duration:0.5s;
+    transition-delay: 0.3s;
+    transition:all;
+}
+.head2 .tv:hover .main{
+    visibility: visible;
+    z-index: 999;
+    transition-delay: 0.3s;
+    transition:all;
+}
+.head2 .women:hover .main{
+    visibility: visible;
+    z-index: 999;
+    transition-delay: 0.3s;
+    transition:all;
+}
+.head2 .men:hover .main{
+    visibility: visible;
+    z-index: 999;
+    transition-delay: 0.3s;
+    transition:all;
+}
+.head2 .baby:hover .main{
+    visibility: visible;
+    z-index: 999;
+    transition-delay: 0.3s;
+    transition:all;
+}
+
+/* .cart{
+    width: 20%;
+    height: 700px;
+    background-color:aliceblue;
+    position: fixed;
+    right: -300px; top: 0px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    z-index: 999;
+}
+.cart.cart-active{
+    transition: 0.5s;
+    right: 0px;
+} */
+
+.small-container{
+     margin: auto;
+     width: 60%;
+     background-color: #FFD737;
+}
+.small-container .tab table {
+    margin-top: 100px;
+    width:100%;
+    height: 150px;
+    
+}
+.small-container .tab thead tr td{
+    border-collapse:collapse;
+    padding-right: 10px;
+    padding-left: 10px;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 1px solid black;
+}
+
+table{
+    border-collapse: collapse;
+}
+.tab tbody tr td{
+    padding: 5px;
+    border: 1px solid gray;
+    width: 100px;
+    text-align: center;
+}
+.tab tbody tr td img{
+    height: 80px;
+    width: 70px;
+}
+.tab tbody tr td input{
+    width: 40px;
+    outline: none;
+    height: 30px;
+}
+
+/* footer */
+.sun{
+    background-color:#FFD737;
+    height: 600px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: justify;
+    margin-top: 50px;
+}
+.aro{
+    
+    height: 600px;
+    width: 35%;
+    margin: 3px;
+    color: black;
+}
+.aro img{
+    margin-left: 60px;
+    width: 160px;
+    margin-top: 20px;
+   
+}
+.aro h2{
+    margin-top: -0px;
+    margin-left: 60px;
+    margin-bottom: 15px;
+    color: black;
+    font-size: 20px;
+}
+.aro p{
+    margin-top: -0px;
+    margin-left: 60px;
+    color: black;
+    font-size: 18px;
+}
+.saku{
+    
+    height: 600px;
+    width: 20%;
+    margin: 3px;
+}
+.saku h2{
+    margin-top: 180px;
+    margin-left: 60px;
+    margin-bottom: 15px;
+    color: black;
+    font-size: 20px;
+}
+
+.saku a{
+    text-decoration: none;
+    margin-top: 100px;
+    margin-left: 60px;
+    color: black;
+    
+}
+.selva{
+    
+    height: 600px;
+    width: 20%;
+    margin: 3px;
+}
+ .selva h2{
+    margin-top: 180px;
+    margin-left: 60px;
+    margin-bottom: 15px;
+    color: black;
+    font-size: 20px;
+}
+.selva a{
+    text-decoration: none;
+    margin-top: 100px;
+    margin-left: 60px;
+    color: black;
+    
+}
+.aji{
+    
+    height: 600px;
+    width: 35%;
+    margin: 5px;
+    color: black;
+}
+.aji p{
+    margin-left: 60px;
+    margin-top: 180px;
+    font-size: 18px;
+}
+.aji img{
+    color: black;
+    margin-left: 60px;
+    margin-top: 250px;
+    height: 50px;
+    width: auto;
+}
+.mathu img{
+    margin-top: -100px;
+    height: 50px;
+    margin-right: 100px;
+}
+

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - Shopping Cart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+            padding: 10px;
+            color: white;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .cart-item {
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .cart-item p {
+            margin: 0;
+        }
+
+        .cart-item button {
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .cart-item button:hover {
+            background-color: #c82333;
+        }
+
+        .total {
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .clear-cart {
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .clear-cart:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Your Cart</h1>
+        <nav>
+            <a href="demo.html">Home</a>
+            <a href="cart2.html">Cart</a>
+        </nav>
+    </header>
+    <div class="container">
+        <div id="cart-items">
+            <!-- Cart items will be dynamically added here -->
+        </div>
+        <p class="total">Total: $<span id="cart-total">0.00</span></p>
+        <button class="clear-cart" onclick="clearCart()">Clear Cart</button>
+    </div>
+
+    <script>
+
+            
+2003
+  
+        function updateCart() {
+            // Get cart from localStorage
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const cartItemsContainer = document.getElementById('cart-items');
+            const cartTotal = document.getElementById('cart-total');
+
+            // Clear previous cart items
+            cartItemsContainer.innerHTML = '';
+
+            // Calculate total price
+            let totalPrice = 0;
+
+            cart.forEach((item, index) => {
+                // Create cart item element
+                const cartItem = document.createElement('div');
+                cartItem.classList.add('cart-item');
+
+                // Set inner HTML
+                cartItem.innerHTML = `
+                    <div>
+                        <p><strong>${item.name}</strong></p>
+                        <p>Price: $${item.price.toFixed(2)}</p>
+                        <p>Quantity: ${item.quantity}</p>
+                    </div>
+                    <button onclick="removeFromCart(${index})">Remove</button>
+                `;
+
+                // Append to container
+                cartItemsContainer.appendChild(cartItem);
+
+                // Update total price
+                totalPrice += item.price * item.quantity;
+            });
+
+            // Update total price on the page
+            cartTotal.textContent = totalPrice.toFixed(2);
+        }
+
+        function removeFromCart(index) {
+            // Get cart from localStorage
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+            // Remove item from cart
+            cart.splice(index, 1);
+
+            // Save updated cart to localStorage
+            localStorage.setItem('cart', JSON.stringify(cart));
+
+            // Update cart display
+            updateCart();
+        }
+
+        function clearCart() {
+            // Clear cart from localStorage
+            localStorage.removeItem('cart');
+
+            // Update cart display
+            updateCart();
+        }
+
+        // Initial cart update on page load
+        updateCart();
+    </script>
+</body>
+</html>
